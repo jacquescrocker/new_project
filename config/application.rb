@@ -1,22 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
-# load rails
-require 'rails'
-[
-  # "active_record",
-  "action_controller",
-  "action_view",
-  "action_mailer",
-  "active_job",
-  # "rails/test_unit",
-  "sprockets",
-].each do |framework|
-  begin
-    require "#{framework}/railtie"
-  rescue LoadError
-  end
-end
-
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -36,5 +20,7 @@ module NewProject
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # Do not swallow errors in after_commit/after_rollback callbacks.
+    config.active_record.raise_in_transactional_callbacks = true
   end
 end
