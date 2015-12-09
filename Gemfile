@@ -32,6 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'active_model_serializers'
 gem 'annotate'
 gem 'config'
+gem 'interactor-rails'
 
 # Use puma as the app server
 gem 'puma'
