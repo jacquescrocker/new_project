@@ -9,8 +9,8 @@ class ActiveRecord::Base
       "#{self.to_s}Serializer".constantize.new(obj).serializable_hash.as_json
     end
   rescue NameError => e
-    Rails.logger.error("No Serializer found for #{self.to_s}")
-    raise e
+    Rails.logger.warn("No ActiveModelSerializer found for #{self.to_s}")
+    obj.as_json
   end
 
   def serialize
