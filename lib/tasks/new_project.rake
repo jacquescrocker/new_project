@@ -10,7 +10,11 @@ namespace :new_project do
 
     camelized = project_name.camelize
 
+    # replace references in application.rb and session_store
     file_string_replace(Rails.root.join("config", "application.rb").to_s, "NewProject", camelized)
     file_string_replace(Rails.root.join("config", "initializers", "session_store.rb").to_s, "new_project", project_name)
+
+    # replace layout title
+    file_string_replace(Rails.root.join("app", "views", "layouts", "application.html.erb").to_s, "NewProject", camelized.underscore.titleize)
   end
 end
