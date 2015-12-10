@@ -37,5 +37,6 @@ module NewProject
 
     # default to production react mode
     config.react.variant = :production
+
   end
 end

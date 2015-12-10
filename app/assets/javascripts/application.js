@@ -10,9 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require vendor/es5-shim
+//= require es5-shim
 //= require jquery
 //= require jquery_ujs
+//= require lodash
 //= require react
 //= require react_ujs
 //= require components
