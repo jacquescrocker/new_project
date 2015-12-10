@@ -11,5 +11,6 @@ namespace :new_project do
     camelized = project_name.camelize
 
     file_string_replace(Rails.root.join("config", "application.rb").to_s, "NewProject", camelized)
+    file_string_replace(Rails.root.join("config", "initializers", "session_store.rb").to_s, "new_project", project_name)
   end
 end
