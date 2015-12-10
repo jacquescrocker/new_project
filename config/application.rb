@@ -24,7 +24,18 @@ module NewProject
     config.autoload_paths << "#{Rails.root}/app/forms"
     config.autoload_paths << "#{Rails.root}/app/workers"
 
+    config.assets.paths << Rails.root.join("app-js")
+    config.assets.paths << Rails.root.join("app-css")
+
+    config.assets.paths << Rails.root.join("vendor", "assets", "fonts")
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
+
+    config.assets.precompile += %w( .svg .eot .woff .ttf)
+
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # default to production react mode
+    config.react.variant = :production
   end
 end

@@ -26,7 +26,6 @@ require 'rspec/rails'
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
 
-
 # use `js: true` in the `describe` block of your feature tests
 require 'capybara/poltergeist'
 Capybara.javascript_driver = :poltergeist
