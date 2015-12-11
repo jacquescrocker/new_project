@@ -14,6 +14,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require lodash
+//= require vendor/lodash-inflection
 //= require react
 //= require react_ujs
 //= require vendor/React.WindowRedirect
