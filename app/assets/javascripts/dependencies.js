@@ -16,3 +16,4 @@
 //= require lodash
 //= require react
 //= require react_ujs
+//= require vendor/React.WindowRedirect
