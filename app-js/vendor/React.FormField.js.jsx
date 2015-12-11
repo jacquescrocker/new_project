@@ -1,5 +1,5 @@
 (() => {
-  // wrap your bootstrap forms with <React.FormField fieldKey={} errors={}>
+  // wrap your bootstrap form inputs with <React.FormField fieldKey={} errors={}>
   class FormField extends React.Component {
     constructor(props) {
       super(props);

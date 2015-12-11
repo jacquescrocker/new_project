@@ -8,7 +8,8 @@ class ApplicationController < ActionController::Base
   helper_method :react_common
   def react_common
     {
-      # current_user: current_user
+      # current_user: current_user,
+      params: params
     }
   end
 
