@@ -33,7 +33,7 @@ end
 
 # Build JSON APIs
 gem 'jbuilder', '~> 2.0'
-gem 'active_model_serializers'
+gem 'active_model_serializers', "~> 0.9.3"
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
