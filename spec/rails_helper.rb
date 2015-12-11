@@ -28,7 +28,25 @@ ActiveRecord::Migration.maintain_test_schema!
 
 # use `js: true` in the `describe` block of your feature tests
 require 'capybara/poltergeist'
+
+# Register slightly larger than default window size...
+Capybara.register_driver :poltergeist do |app|
+  Capybara::Poltergeist::Driver.new(app, { debug: false, # change this to true to troubleshoot
+                                           window_size: [1300, 1000] # this can affect dynamic layout
+  })
+end
 Capybara.javascript_driver = :poltergeist
+
+def render_page(name)
+  png_name = name.strip.gsub(/\W+/, '-')
+  path = File.join(Rails.application.config.integration_test_render_dir, "#{png_name}.png")
+  page.driver.render(path)
+end
+
+# shortcut for typing save_and_open_page
+def page!
+  save_and_open_page
+end
 
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
