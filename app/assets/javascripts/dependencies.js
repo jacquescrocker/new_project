@@ -18,4 +18,4 @@
 //= require react
 //= require react_ujs
 //= require vendor/React.WindowRedirect
-//= require vendor/React.ReactFormField
+//= require vendor/React.FormField
