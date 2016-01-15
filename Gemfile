@@ -19,8 +19,6 @@ gem 'sprockets', '>= 3.0.0'
 
 gem "bourbon", "= 3.2.4" # old bourbon, will work with libsass
 
-gem 'react-rails', '~> 1.5.0'
-
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
